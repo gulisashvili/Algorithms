@@ -1,11 +1,11 @@
 var swap = function(array, firstIndex, secondIndex) {
     var temp = array[firstIndex];
+    
     array[firstIndex] = array[secondIndex];
     array[secondIndex] = temp;
 };
 
 var indexOfMinimum = function(array, startIndex) {
-
     var minValue = array[startIndex];
     var minIndex = startIndex;
 
@@ -21,8 +21,8 @@ var indexOfMinimum = function(array, startIndex) {
 var selectionSort = function(array) {
     for(var i = 0; i < array.length; i++) {
         var smallestIndex = indexOfMinimum(array, i);
+        
         swap(array, i, smallestIndex);
-    
     }
 };
 
