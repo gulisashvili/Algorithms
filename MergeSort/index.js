@@ -25,14 +25,7 @@ function merge(left, right) {
     }
   }
   
-  while(left.length) {
-    res.push(left.shift())
-  }
-  while(right.length) {
-    res.push(right.shift())
-  }
-  
-  return res
+  return [...res, ...left, ...right]
   
 }
 
