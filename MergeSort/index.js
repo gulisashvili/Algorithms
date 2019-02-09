@@ -9,13 +9,14 @@ function mergeSort(arr) {
   var length = arr.length
   var middle = Math.floor(length/2)
   var left = arr.slice(0, middle)
-  var right = arr.slice(middle, arr.length)
+  var right = arr.slice(middle, length)
   
   return merge(mergeSort(left), mergeSort(right))
 }
 
 function merge(left, right) {
   var res = []
+  
   while(left.length && right.length) {
     if(left[0] < right[0]) {
       res.push(left.shift())
